@@ -10,7 +10,7 @@ import matplotlib
 matplotlib.use('Agg')
 
 import sys
-sys.path.append('/home/float/Sum-of-Functions-Optimizer/')
+sys.path.append('/home/eweiss/Desktop/Sum-of-Functions-Optimizer/')
 from sfo import SFO
 
 from theano.sandbox.rng_mrg import MRG_RandomStreams as RandomStreams
@@ -493,7 +493,7 @@ if plot_reverse_process:
 	#pp.suptitle(r'Learned $\beta$ Schedule')
 	#pp.axes(xlabel='t', ylabel=r'$\beta$')
 	#pp.plot(np.arange(nsteps),(1.0/(1.0+np.exp(-opt_params[-1])))*beta_max)
-	pp.show()
+	#pp.show()
 
 exit()
 
