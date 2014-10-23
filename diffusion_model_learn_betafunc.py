@@ -497,12 +497,10 @@ if plot_reverse_process:
 	#pp.show()
 	pp.figure(9)
 	pp.hexbin(samples[-1,:,0],samples[-1,:,1])
-	pp.colorbar()
 	pp.savefig('model_hist.pdf')
 	pp.close()
 	pp.figure(10)
 	pp.hexbin(data[:,0], data[:,1])
-	pp.colorbar()
 	pp.savefig('data_hist.pdf')
 	pp.close()
 
