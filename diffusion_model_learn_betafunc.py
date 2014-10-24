@@ -20,7 +20,7 @@ nx=2
 nsamps=64000
 #n_subfuncs=int(np.round(np.sqrt(nsamps)/10.0))
 #batchsize=int(np.round(10.0*np.sqrt(nsamps)))
-n_subfuncs=75
+n_subfuncs=1
 batchsize=int(nsamps/n_subfuncs)
 nsteps=40
 nbeta=20
@@ -444,7 +444,16 @@ def sample(params):
 
 opt_params=init_params
 
+testsubfunc=[data, np.random.randn(nsteps,nsamps,2).astype(np.float32)]
+
+testloss, teststuff=f_df(init_params, testsubfunc)
+print testloss
+exit()
+
 forward_data=get_forward_traj(data, init_params[-1])
+
+
+
 if plot_reverse_process:
 	samples=sample(opt_params)
 	dsize=5
